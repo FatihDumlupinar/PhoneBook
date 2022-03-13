@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PhoneBook.Contact.Repositories.DataAccess
 {
-    public interface IEntityRepository<TEntity> where TEntity : BaseEntity, IEntity, new()
+    public interface IEntityRepository<TEntity> : IDisposable where TEntity : BaseEntity, IEntity, new()
     {
         #region Get
 
@@ -56,6 +56,13 @@ namespace PhoneBook.Contact.Repositories.DataAccess
 
         void Delete(TEntity entity);
         Task DeleteAsync(TEntity entity);
+
+        #endregion
+
+        #region SaveChange
+
+        bool SaveChange();
+        Task<bool> SaveChangeAsync();
 
         #endregion
 

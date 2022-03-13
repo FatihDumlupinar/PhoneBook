@@ -137,5 +137,28 @@ namespace PhoneBook.Contact.Repositories.DataAccess.EntityFramework
 
         #endregion
 
+        #region SaveChange
+        
+        public bool SaveChange()
+        {
+            var count =_dbContext.SaveChanges();
+            return count > 0;
+        }
+
+        public async Task<bool> SaveChangeAsync()
+        {
+            var count = await _dbContext.SaveChangesAsync();
+            return count > 0;
+        }
+
+        #endregion
+
+        #region Dispose
+        public void Dispose()
+        {
+            _dbContext.Dispose();
+        }
+
+        #endregion
     }
 }
