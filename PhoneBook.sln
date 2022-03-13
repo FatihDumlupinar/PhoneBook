@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-Contact", "01-Contact", "{5179DBCE-9C24-4D25-BE92-41C896A4FE19}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-Report", "02-Report", "{B29513AD-0667-4A1E-83D0-D611A1DDC76B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-Entities", "01-Entities", "{AD40568C-3CF0-41FB-B4B1-B12484EC1A9C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-Repositories", "02-Repositories", "{334BF8B0-CD1A-4926-9411-4E8C7A3C275A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04-Api", "04-Api", "{7FF655A5-FA55-4BB8-B3E4-4CB0CFB68C9C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-Dtos", "03-Dtos", "{D0B7008A-9C18-4F4E-B72C-5F59981E393B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook.Contact.Entities", "PhoneBook.Contact.Entities\PhoneBook.Contact.Entities.csproj", "{127B4F93-CDA8-4CFF-B1EF-263A8A7323FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook.Contact.Repositories", "PhoneBook.Contact.Repositories\PhoneBook.Contact.Repositories.csproj", "{8791A753-1F1D-4786-8B53-2AE040F6AC23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{127B4F93-CDA8-4CFF-B1EF-263A8A7323FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{127B4F93-CDA8-4CFF-B1EF-263A8A7323FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{127B4F93-CDA8-4CFF-B1EF-263A8A7323FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{127B4F93-CDA8-4CFF-B1EF-263A8A7323FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8791A753-1F1D-4786-8B53-2AE040F6AC23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8791A753-1F1D-4786-8B53-2AE040F6AC23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8791A753-1F1D-4786-8B53-2AE040F6AC23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8791A753-1F1D-4786-8B53-2AE040F6AC23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AD40568C-3CF0-41FB-B4B1-B12484EC1A9C} = {5179DBCE-9C24-4D25-BE92-41C896A4FE19}
+		{334BF8B0-CD1A-4926-9411-4E8C7A3C275A} = {5179DBCE-9C24-4D25-BE92-41C896A4FE19}
+		{7FF655A5-FA55-4BB8-B3E4-4CB0CFB68C9C} = {5179DBCE-9C24-4D25-BE92-41C896A4FE19}
+		{D0B7008A-9C18-4F4E-B72C-5F59981E393B} = {5179DBCE-9C24-4D25-BE92-41C896A4FE19}
+		{127B4F93-CDA8-4CFF-B1EF-263A8A7323FB} = {AD40568C-3CF0-41FB-B4B1-B12484EC1A9C}
+		{8791A753-1F1D-4786-8B53-2AE040F6AC23} = {334BF8B0-CD1A-4926-9411-4E8C7A3C275A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC7E3A9B-584E-4729-A3CA-4114DB857DC8}
+	EndGlobalSection
+EndGlobal
