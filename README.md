@@ -3,6 +3,9 @@ Basit Telefon Rehber Web Uygulaması - Microservice - RabbitMQ
 
 
 ## Contact API
+> N-Tier Layer
+> PostgreSQL
+> CodeFirst 
 
 ### Swagger UI
 ![ContactApiSwaggerUI](https://github.com/FatihDumlupinar/PhoneBook/blob/master/Dosyalar/ContactApiSwaggerUI.png?raw=true)
@@ -11,6 +14,9 @@ Basit Telefon Rehber Web Uygulaması - Microservice - RabbitMQ
 ![ContactAdd](https://github.com/FatihDumlupinar/PhoneBook/blob/master/Dosyalar/ContactAdd.png?raw=true)
 
 ## Report API
+> In-Memory DB
+> RabbitMQ
+> Background Service
 
 ### Swagger UI
 ![ReportApiSwaggerUI](https://github.com/FatihDumlupinar/PhoneBook/blob/master/Dosyalar/ReportApiSwaggerUI.png?raw=true)
