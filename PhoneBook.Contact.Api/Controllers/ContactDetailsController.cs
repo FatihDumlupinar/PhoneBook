@@ -1,13 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PhoneBook.Contact.Dtos.Enums;
 using PhoneBook.Contact.Dtos.Model.ContactDetail;
 using PhoneBook.Contact.Entities.Db;
 using PhoneBook.Contact.Repositories.Interfaces;
-using PhoneBook.Shared.Common.Helpers;
 using Swashbuckle.AspNetCore.Annotations;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -33,6 +29,7 @@ namespace PhoneBook.Contact.Api.Controllers
         #region Add
 
         [HttpPost("Add")]
+        [SwaggerResponse((int)HttpStatusCode.OK)]
         public async Task<IActionResult> AddAsync(ContactDetailModel model)
         {
             var dateTimeNow = DateTime.Now;
@@ -70,6 +67,8 @@ namespace PhoneBook.Contact.Api.Controllers
         #region Delete
 
         [HttpDelete("Delete")]
+        [SwaggerResponse((int)HttpStatusCode.NotFound)]
+        [SwaggerResponse((int)HttpStatusCode.OK)]
         public async Task<IActionResult> DeleteAsync(Guid Id)
         {
             var getOldData = await _contactDetailRepository.GetAsync(i => i.IsActive && i.Id == Id);
@@ -85,27 +84,6 @@ namespace PhoneBook.Contact.Api.Controllers
             await _contactDetailRepository.SaveChangeAsync();
 
             return Ok();
-        }
-
-        #endregion
-
-        #region GetAllDetailsByContactId
-
-        [HttpGet("GetAllDetailsByContactId/{Id}")]
-        [SwaggerResponse((int)HttpStatusCode.OK, Type = typeof(List<ContactDetailListModel>))]
-        public async Task<IActionResult> GetAllDetailsByContactId(Guid Id)
-        {
-            var getAllData = await _contactDetailRepository.GetListAsync(i => i.IsActive && i.ContactId == Id);
-
-            var responseModel = getAllData.Select(i => new ContactDetailListModel()
-            {
-                ContactDetailId = i.Id,
-                ContactDetailContactTypeId = i.ContactTypeId,
-                ContactDetailContactTypeText = EnumHelper<StaticContactTypeEnm>.GetDisplayValue(EnumHelper<StaticContactTypeEnm>.Parse(i.ContactTypeId.ToString())),
-                ContactDetailText = i.Text
-            });
-
-            return Ok(responseModel);
         }
 
         #endregion
